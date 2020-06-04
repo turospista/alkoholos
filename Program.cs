@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 
 namespace pia
 {
@@ -9,7 +10,6 @@ namespace pia
             Console.WriteLine("Milyen piát ittál ma?\nÍrd be a kódját.");
             Console.WriteLine("1 - Sör\n2 - Bor\n3 - Pálinka");
 
-            
             int sör = 0;
             int bor = 0;
             int pálinka = 0;
@@ -34,15 +34,17 @@ namespace pia
                     pálinka++;
                 }
 
-                Console.WriteLine("Ittál még valamit?");
+                Console.WriteLine("Ittál még valamit? (igen/nem)");
 
-             
-
-            } while (Console.ReadLine() != "q");
+            } while (Console.ReadLine() == "igen");
 
             Console.WriteLine("Ennyi sört ittál: " + sör);
             Console.WriteLine("Ennyi bort ittál: " + bor);
             Console.WriteLine("Ennyi pálinkát ittál: " + pálinka);
+
+            Console.WriteLine("Megérte??\nKilépéshez nyomj 'Q' betűt.");
+
+            while (Console.ReadKey().Key != ConsoleKey.Q) { }
 
 
         }          
