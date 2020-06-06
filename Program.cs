@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Numerics;
 
 namespace pia
@@ -7,8 +8,8 @@ namespace pia
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Milyen piát ittál ma?\nÍrd be a kódját.");
-            Console.WriteLine("1 - Sör\n2 - Bor\n3 - Pálinka");
+            Console.WriteLine("Milyen piát ittál ma?");
+            Console.WriteLine("Sört, bort vagy pálinkát?");
 
             int sör = 0;
             int bor = 0;
@@ -16,23 +17,28 @@ namespace pia
 
             do
             {
-                int pia = Convert.ToInt32(Console.ReadLine());
+                string pia = Console.ReadLine();
 
-                if (pia == 1)
+                if (pia == "sört")
                 {
-                    Console.WriteLine("A sör finom és kevés benne az alkohol.");
+                    Console.WriteLine("A sör finom.");
                     sör++;
                 }
-                else if (pia == 2)
+
+
+                if (pia == "bort")
                 {
-                    Console.WriteLine("A bor finom és nem olyan kevés benne az alkohol sem.");
+                    Console.WriteLine("A bor finom.");
                     bor++;
                 }
-                else
+
+
+                if (pia == "pálinkát")
                 {
-                    Console.WriteLine("A pálinka ütős pia. És finom is.");
+                    Console.WriteLine("A pálinka finom.");
                     pálinka++;
                 }
+
 
                 Console.WriteLine("Ittál még valamit? (igen/nem)");
 
