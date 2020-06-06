@@ -8,7 +8,7 @@ namespace pia
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Milyen piát ittál ma?");
+            Console.WriteLine("Mit ittál ma?");
             Console.WriteLine("Sört, bort vagy pálinkát?");
 
             int sör = 0;
@@ -18,6 +18,12 @@ namespace pia
             do
             {
                 string pia = Console.ReadLine();
+
+                if (pia != "sört" && pia != "bort" && pia != "pálinkát")
+                {
+                    Console.WriteLine("Ezt a piát nem ismerem, kérlek válassz a fentiek közül.");
+                }
+
 
                 if (pia == "sört")
                 {
@@ -48,10 +54,9 @@ namespace pia
             Console.WriteLine("Ennyi bort ittál: " + bor);
             Console.WriteLine("Ennyi pálinkát ittál: " + pálinka);
 
-            Console.WriteLine("Megérte??\nKilépéshez nyomj 'Q' betűt.");
+            Console.WriteLine("Megérte??\nKilépéshez nyomj 'q' betűt.");
 
             while (Console.ReadKey().Key != ConsoleKey.Q) { }
-
 
         }          
     }
