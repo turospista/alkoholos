@@ -8,6 +8,10 @@ namespace pia
     {
         public static void Main(string[] args)
         {
+            Console.WriteLine("Szia. Hogy hívnak?");
+            var nev = Console.ReadLine();
+            var datum = DateTime.Now;
+            Console.WriteLine($"Szervusz {nev}, {datum:d} {datum:t} -kor.");
             Console.WriteLine("Mit ittál ma?");
             Console.WriteLine("Sört (5%, 5 dl), bort (8%, 3 dl) vagy pálinkát (48%, 0,4 dl)?");
 
