@@ -1,0 +1,13 @@
+C:\Users\Beno\source\repos\pia\pia\bin\Debug\netcoreapp3.1\pia.exe
+C:\Users\Beno\source\repos\pia\pia\bin\Debug\netcoreapp3.1\pia.deps.json
+C:\Users\Beno\source\repos\pia\pia\bin\Debug\netcoreapp3.1\pia.runtimeconfig.json
+C:\Users\Beno\source\repos\pia\pia\bin\Debug\netcoreapp3.1\pia.runtimeconfig.dev.json
+C:\Users\Beno\source\repos\pia\pia\bin\Debug\netcoreapp3.1\pia.dll
+C:\Users\Beno\source\repos\pia\pia\bin\Debug\netcoreapp3.1\pia.pdb
+C:\Users\Beno\source\repos\pia\pia\obj\Debug\netcoreapp3.1\pia.csprojAssemblyReference.cache
+C:\Users\Beno\source\repos\pia\pia\obj\Debug\netcoreapp3.1\pia.AssemblyInfoInputs.cache
+C:\Users\Beno\source\repos\pia\pia\obj\Debug\netcoreapp3.1\pia.AssemblyInfo.cs
+C:\Users\Beno\source\repos\pia\pia\obj\Debug\netcoreapp3.1\pia.csproj.CoreCompileInputs.cache
+C:\Users\Beno\source\repos\pia\pia\obj\Debug\netcoreapp3.1\pia.dll
+C:\Users\Beno\source\repos\pia\pia\obj\Debug\netcoreapp3.1\pia.pdb
+C:\Users\Beno\source\repos\pia\pia\obj\Debug\netcoreapp3.1\pia.genruntimeconfig.cache

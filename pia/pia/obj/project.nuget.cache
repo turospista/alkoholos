@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Kqmil23ul3gk5EiN3+VmF1LxCOrsPK+mkNMLKkv/lgqyU4WXptvW3OxNQdUi7eVH7GpvW7byB3SaW48zxEYV0g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Beno\\source\\repos\\pia\\pia\\pia.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Beno\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}
