@@ -1,10 +1,33 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Numerics;
+using System.Runtime.CompilerServices;
+using System.Text.RegularExpressions;
 
 namespace pia
 {
-    public class Program
+
+    class Piák
+    {
+        public string Pianév;
+        public double Alkoholmennyiség;
+        public int Mennyiség = 0;
+        public int ID;
+
+        public string Piatípus()
+        {
+            string típus = $"{Pianév} {Alkoholmennyiség} %  --- Sorszám: {ID}";
+            return típus;
+        }
+        public int Bekérés()
+        {
+            int bekértID = Convert.ToInt32(Console.ReadLine());
+            return bekértID;
+        }
+    }
+    class Program
     {
         public static void Main(string[] args)
         {
@@ -12,9 +35,53 @@ namespace pia
             var nev = Console.ReadLine();
             var datum = DateTime.Now;
             Console.WriteLine($"Szervusz {nev}, {datum:d} {datum:t} -kor.");
-            Console.WriteLine("Mit ittál ma?");
-            Console.WriteLine("Sört (5%, 5 dl), bort (8%, 3 dl) vagy pálinkát (48%, 0,4 dl)?");
 
+            Console.WriteLine("---------------------------------------------");
+
+            List<Piák> itallista = new List<Piák>();
+
+            itallista.Add(new Piák() { Pianév = "Sör", Alkoholmennyiség = 4.8, ID = 10 });
+            itallista.Add(new Piák() { Pianév = "Bor", Alkoholmennyiség = 8, ID = 11 });
+            itallista.Add(new Piák() { Pianév = "Whisky", Alkoholmennyiség = 42, ID = 12 });
+            itallista.Add(new Piák() { Pianév = "Pálinka", Alkoholmennyiség = 48, ID = 13});
+            itallista.Add(new Piák() { Pianév = "Gin", Alkoholmennyiség = 40, ID = 14 });
+            itallista.Add(new Piák() { Pianév = "Semmit", ID = 15 });
+
+            Listakiírás(itallista);
+            Mitittál();
+
+
+                Console.ReadKey();
+
+            void Listakiírás(List<Piák> itallista)
+            {
+                foreach (var Piák in itallista)
+                {
+                    Console.WriteLine(Piák.Piatípus());
+                }
+                Console.WriteLine("---------------------------------------------");
+                Console.WriteLine("Mit ittál ma? Add meg a sorszámát:");
+            }
+
+            void Mitittál()
+            {
+                foreach (var Piák in itallista)
+                {
+                    if (List<Piák>.Contains(Piák.Bekérés()))
+                    {
+                        Console.WriteLine("Az finom. Mennyit ittál belőle?");
+                    }
+                }
+            }
+
+
+            static void Alkoholkalkulátor()
+            {
+
+
+            }
+
+            /*
             int sör = 0;
             int bor = 0;
             int pálinka = 0;
@@ -91,7 +158,7 @@ namespace pia
             while (Console.ReadKey().Key != ConsoleKey.Q) { }
 
             
-
+            */
 
 
         }
