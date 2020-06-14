@@ -29,7 +29,7 @@ namespace pia
     }
     class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
             Console.WriteLine("Szia. Hogy hívnak?");
             var nev = Console.ReadLine();
@@ -43,17 +43,16 @@ namespace pia
             itallista.Add(new Piák() { Pianév = "Sör", Alkoholmennyiség = 4.8, ID = 10 });
             itallista.Add(new Piák() { Pianév = "Bor", Alkoholmennyiség = 8, ID = 11 });
             itallista.Add(new Piák() { Pianév = "Whisky", Alkoholmennyiség = 42, ID = 12 });
-            itallista.Add(new Piák() { Pianév = "Pálinka", Alkoholmennyiség = 48, ID = 13});
+            itallista.Add(new Piák() { Pianév = "Pálinka", Alkoholmennyiség = 48, ID = 13 });
             itallista.Add(new Piák() { Pianév = "Gin", Alkoholmennyiség = 40, ID = 14 });
             itallista.Add(new Piák() { Pianév = "Semmit", ID = 15 });
 
             Listakiírás(itallista);
             Mitittál();
+            Console.ReadKey();
+        }
 
-
-                Console.ReadKey();
-
-            void Listakiírás(List<Piák> itallista)
+            static void Listakiírás(List<Piák> itallista)
             {
                 foreach (var Piák in itallista)
                 {
@@ -63,7 +62,7 @@ namespace pia
                 Console.WriteLine("Mit ittál ma? Add meg a sorszámát:");
             }
 
-            void Mitittál()
+            static void Mitittál()
             {
                 foreach (var Piák in itallista)
                 {
@@ -164,7 +163,5 @@ namespace pia
             
             */
 
-
-        }
     }
 }
