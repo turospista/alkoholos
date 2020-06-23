@@ -8,7 +8,9 @@ using System.Text.RegularExpressions;
 namespace pia
 {
 
-    class Piák
+    //  TODO: A class azt írja le, hogy egy Pia hogy néz ki. Itt csak egy darab Pia. nevezd át. Piák akkor lesz, ha listában rakod ++
+    //  Amikor csinálsz egy new Pia()-t akkor csinlász egy példányt az osztályból, ami egy darab Piát jelent. ++
+    class Pia
     {
         public string Pianév;
         public double Alkoholmennyiség;
@@ -21,11 +23,6 @@ namespace pia
             return típus;
         }
 
-        public int Bekérés()
-        {
-            int bekértID = Convert.ToInt32(Console.ReadLine());
-            return bekértID;
-        }
     }
     class Program
     {
@@ -35,54 +32,69 @@ namespace pia
             var nev = Console.ReadLine();
             var datum = DateTime.Now;
             Console.WriteLine($"Szervusz {nev}, {datum:d} {datum:t} -kor.");
-
             Console.WriteLine("---------------------------------------------");
 
-            List<Piák> itallista = new List<Piák>();
+            List<Pia> itallista = new List<Pia>();
 
-            itallista.Add(new Piák() { Pianév = "Sör", Alkoholmennyiség = 4.8, ID = 10 });
-            itallista.Add(new Piák() { Pianév = "Bor", Alkoholmennyiség = 8, ID = 11 });
-            itallista.Add(new Piák() { Pianév = "Whisky", Alkoholmennyiség = 42, ID = 12 });
-            itallista.Add(new Piák() { Pianév = "Pálinka", Alkoholmennyiség = 48, ID = 13 });
-            itallista.Add(new Piák() { Pianév = "Gin", Alkoholmennyiség = 40, ID = 14 });
-            itallista.Add(new Piák() { Pianév = "Semmit", ID = 15 });
+            itallista.Add(new Pia() { Pianév = "Sör", Alkoholmennyiség = 4.8, ID = 10 });
+            itallista.Add(new Pia() { Pianév = "Bor", Alkoholmennyiség = 8, ID = 11 });
+            itallista.Add(new Pia() { Pianév = "Whisky", Alkoholmennyiség = 42, ID = 12 });
+            itallista.Add(new Pia() { Pianév = "Pálinka", Alkoholmennyiség = 48, ID = 13 });
+            itallista.Add(new Pia() { Pianév = "Gin", Alkoholmennyiség = 40, ID = 14 });
+            itallista.Add(new Pia() { Pianév = "Semmit", ID = 15 });
 
+
+            //  TODO: ide rakd be azt a ciklust, ami addig fut amíg ki nem lépsz.
             Listakiírás(itallista);
-            Mitittál();
-            Console.ReadKey();
+            do
+            {
+
+
+
+
+            //  TODO: itt add át paraméterként az itallistát, akkor el fogod érni a metódus foreach-áben is ++
+            //  (vezess be egy List<Pia> paramétert a Mitittál metódusnál, mint a Listakiírásnál) ++
+            
+
+                Console.WriteLine("Ittál még valamit? (igen/nem)");
+            } while (Console.ReadLine() == "igen");
+            Mitittál(itallista);
         }
 
-            static void Listakiírás(List<Piák> itallista)
+        static void Listakiírás(List<Pia> itallista)
+        {
+            foreach (var Pia in itallista)
             {
-                foreach (var Piák in itallista)
+                Console.WriteLine(Pia.Piatípus());
+            }
+            Console.WriteLine("---------------------------------------------");
+            Console.WriteLine("Mit ittál ma? Add meg a sorszámát:");
+        }
+
+        static void Mitittál(List<Pia> itallista)
+        {
+            //  TODO: itt kérd meg Console.ReadLine-al a pia id-ját, tárold el egy int változóba -> int.Parse(),  
+            //  majd a foreachben keresd meg azt a piát aminek megegyezik azzal az id-je
+            Console.WriteLine("Add meg az elfogyasztott pia ID-ját.");
+            string str = Console.ReadLine();
+            int piaid = int.Parse(str);
+
+            foreach (var Pia in itallista)
+            {
+                if (itallista.Contains())   //háteztmákajaknemértem  mi az a pia.Pia amire nem tud convertálni intről?
                 {
-                    Console.WriteLine(Piák.Piatípus());
-                }
-                Console.WriteLine("---------------------------------------------");
-                Console.WriteLine("Mit ittál ma? Add meg a sorszámát:");
-            }
-
-            static void Mitittál()
-            {
-                foreach (var Piák in itallista)
-                {
-                    if (itallista.Contains(Piák.Bekérés()))
-                    {
-                        Console.WriteLine("Az finom. Mennyit ittál belőle?");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Ezt nem szerepel a listán.");
-                    }
+                    Console.WriteLine("Ez igen");
+                    return;
                 }
             }
+        }
 
 
-            static void Alkoholkalkulátor()
-            {
+        static void Alkoholkalkulátor()
+        {
 
 
-            }
+        }
 
             /*
             int sör = 0;

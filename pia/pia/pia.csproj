@@ -5,4 +5,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Include="C:\Users\Beno\Documents\Programozás\Pia\Pia 1.0\Program.cs" Link="Program.cs" />
+  </ItemGroup>
+
 </Project>
